@@ -85,3 +85,7 @@ i{
 i:hover{
     filter: brightness(80%);
 }
+
+#logo{
+    height:300px;
+}
