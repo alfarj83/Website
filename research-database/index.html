@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Research Database - Project Voice</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
+
     <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm">
         <div class="container">
             <a class="navbar-brand fw-bold text-primary" href="#">Project Voice</a>
@@ -34,22 +34,229 @@
         </div>
     </nav>
 
-    <section class="hero-gradient">
+    <div class="gradient-header mb-5">
         <div class="container">
-            
-    </section>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <h1 class="display-4 fw-bold">Research Database</h1>
+            <p class="lead">Manage and explore our research paper collection</p>
+        </div>
+    </div>
 
-    <footer class="py-4 bg-light">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6 text-center text-md-start">
-                    <p class="mb-0">© 2024 Project Voice. All rights reserved.</p>
+    <div class="container">
+        <div class="tab-container">
+            <div class="custom-tabs d-flex">
+                <button class="custom-tab active" onclick="switchTab('view')">
+                    View Database
+                </button>
+                <button class="custom-tab" onclick="switchTab('add')">
+                    Add New Paper
+                </button>
+            </div>
+
+            <!-- View Database Tab -->
+            <div id="view-tab" class="tab-content active">
+                <!-- Search Bar -->
+                <div class="search-bar mb-4">
+                    <div class="row align-items-center">
+                        <div class="col-md-8">
+                            <input type="text" class="form-control form-control-lg" placeholder="Search research papers...">
+                        </div>
+                        <div class="col-md-4">
+                            <button class="btn btn-primary btn-lg w-100">Search</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <!-- Filter Sidebar -->
+                    <div class="col-lg-3 mb-4">
+                        <div class="filter-sidebar">
+                            <h5 class="fw-bold mb-4">Filters</h5>
+                            
+                            <div class="mb-4">
+                                
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                               
+                            </div>
+
+                            <button class="btn btn-outline-primary w-100">Clear All Filters</button>
+                        </div>
+                    </div>
+
+                    <!-- Research Entries -->
+                    <div class="col-lg-9">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <h5 class="fw-bold mb-0">122 Research Papers</h5>
+                            <div class="d-flex gap-3 align-items-center">
+                                <span>Sort by:</span>
+                                <select class="form-select">
+                                    <option>Most Recent</option>
+                                    <option>Oldest First</option>
+                                    <option>Title A-Z</option>
+                                    <option>Title Z-A</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Research Cards -->
+                        <div class="research-entries">
+                            <!-- Entry 1 -->
+                            <div class="card research-card mb-4">
+                                <div class="card-body p-4">
+                                    <div class="d-flex justify-content-between align-items-start mb-3">
+                                        <h5 class="card-title fw-bold mb-0">Advanced Neural Networks for Speech Recognition in Mobile Devices</h5>
+                                        <span class="text-muted">March 2024</span>
+                                    </div>
+                                    <p class="text-muted mb-3">Journal of Artificial Intelligence, Vol. 45, No. 3</p>
+                                    <p class="mb-3">This research presents a novel approach to implementing efficient neural networks for speech recognition on resource-constrained mobile devices...</p>
+                                    <div class="mb-3">
+                                        <span class="tag-badge">Filter 1</span>
+                                        <span class="tag-badge">Filter 2</span>
+                                        <span class="tag-badge">Filter 3</span>
+                                    </div>
+                                    <div class="d-flex gap-3">
+                                        <a href="#" class="btn btn-outline-primary btn-sm">
+                                            <img src="https://via.assets.so/img.jpg?w=400&h=150&tc=#4a90e2&bg=white&t=file upload
+
+                                            " alt="latex" class="file-icon">
+                                            LaTeX Notes
+                                        </a>
+                                        <a href="#" class="btn btn-outline-primary btn-sm">
+                                            <img src="https://via.assets.so/img.jpg?w=400&h=150&tc=#4a90e2&bg=white&t=file upload
+
+                                            " alt="pdf" class="file-icon">
+                                            PDF Notes
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Entry 2 -->
+                            <div class="card research-card mb-4">
+                                <!-- Similar structure to Entry 1 -->
+                            </div>
+                        </div>
+
+                        <!-- Pagination -->
+                        <nav class="d-flex justify-content-center mt-5">
+                            <ul class="pagination">
+                                <li class="page-item disabled">
+                                    <a class="page-link" href="#" tabindex="-1">Previous</a>
+                                </li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">Next</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add New Paper Tab -->
+            <div id="add-tab" class="tab-content" style="display: none;">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <div class="card custom-card">
+                            <div class="card-body p-4">
+                                <form>
+                                    <div class="mb-4">
+                                        <label class="form-label fw-bold">Title</label>
+                                        <input type="text" class="form-control" placeholder="Enter research title">
+                                    </div>
+
+                                    <div class="row mb-4">
+                                        <div class="col-md-6">
+                                            <label class="form-label fw-bold">Journal/Book Title</label>
+                                            <input type="text" class="form-control" placeholder="Enter journal or book title">
+                                        </div>
+                                        <div class="col-md-3">
+                                            <label class="form-label fw-bold">Published Year</label>
+                                            <select class="form-select">
+                                                <option selected>2024</option>
+                                                <option>2023</option>
+                                                <option>2022</option>
+                                                <option>2021</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <label class="form-label fw-bold">Published Month</label>
+                                            <select class="form-select">
+                                                <option selected>January</option>
+                                                <option>February</option>
+                                                <option>March</option>
+                                                <option>April</option>
+                                                <option>May</option>
+                                                <option>June</option>
+                                                <option>July</option>
+                                                <option>August</option>
+                                                <option>September</option>
+                                                <option>October</option>
+                                                <option>November</option>
+                                                <option>December</option>
+                                                <!-- Add other months -->
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-4">
+                                        <div class="col-md-6">
+                                            <label class="form-label fw-bold">Volume (Optional)</label>
+                                            <input type="text" class="form-control" placeholder="Enter volume number">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label fw-bold">Number (Optional)</label>
+                                            <input type="text" class="form-control" placeholder="Enter issue number">
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-4">
+                                        <label class="form-label fw-bold">Annotation/Short Summary</label>
+                                        <textarea class="form-control" rows="4" placeholder="Enter a brief summary of the research"></textarea>
+                                    </div>
+
+                                    <div class="mb-4">
+                                        <label class="form-label fw-bold">Tags</label>
+                                        <input type="text" class="form-control mb-2" placeholder="Enter tags separated by commas">
+                                        <div class="d-flex flex-wrap">
+                                            <span class="tag-badge">Filter 1</span>
+                                            <span class="tag-badge">Filter 2</span>
+                                            <span class="tag-badge">Filter 3</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-4">
+                                        <label class="form-label fw-bold">LaTeX Notes</label>
+                                        <div class="file-upload mb-3">
+                                            <img src="https://via.assets.so/img.jpg?w=400&h=150&tc=blue&bg=lightgrey&t=file upload" alt="upload" class="mb-2">
+                                            <p class="mb-0">Drag and drop your LaTeX files here or click to browse</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-4">
+                                        <label class="form-label fw-bold">PDF Version</label>
+                                        <div class="file-upload">
+                                            <img src="https://via.assets.so/img.jpg?w=400&h=150&tc=blue&bg=lightgrey&t=file upload" alt="upload" class="mb-2">
+                                            <p class="mb-0">Drag and drop your PDF files here or click to browse</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-grid gap-2">
+                                        <button type="submit" class="btn btn-primary btn-lg">Save Research Entry</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
