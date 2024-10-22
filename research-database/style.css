@@ -1,0 +1,43 @@
+:root {
+    --primary-color: #4a90e2;
+    --secondary-color: #7c4dff;
+    --accent-color: #64b5f6;
+    --light-blue: #e3f2fd;
+    --light-purple: #f3e5f5;
+}
+
+.hero-gradient{
+    background: linear-gradient(135deg, #4a90e2 0%, #7c4dff 100%);
+    padding: 6rem 0;
+    color: white;
+}
+
+.nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color);
+}
+
+
+.licensing-section {
+    background-color: var(--light-blue);
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 2rem 0;
+}
+#logo{
+    height:300px;
+}
+
+footer{
+    background-color: #4a90e2;
+}
