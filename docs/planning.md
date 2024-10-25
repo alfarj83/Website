@@ -65,8 +65,8 @@ The Project-VOICE website will serve as a central hub to:
 
 ### 2. **Technical Requirements**
    - Use **modern web technologies** (HTML5, CSS3, Bootstrap.JavaScript/React for the front end).
-   - For the backend, consider **Django/Flask** (Python) or **Node.js** or **php** for handling the database and user interactions.
-   - Utilize a **SQL database** to store research papers, notes, and code experiments.
+   - For the backend, consider **Django/Flask/MongoDB**  or **Node.js**  for handling the database and user interactions.
+   - Utilize a **NoSQL or SQL database** to store research papers, notes, and code experiments.
 
 ### 3. **Content Management**
    - Use Markdown for posts and articles to allow easy editing and formatting.
@@ -102,6 +102,6 @@ The Project-VOICE website will serve as a central hub to:
    - [ ] Ensure accessibility standards are met.
 
 ### **Phase 4 - Deployment & Maintenance**
-   - [ ] Deploy the website to a web hosting service (Github Pages).
+   - [ ] Deploy the website to a web hosting service.
    - [ ] Implement security measures (SSL certificate, secure authentication).
    - [ ] Continuously update the website based on feedback and new content.
