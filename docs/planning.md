@@ -88,6 +88,7 @@ The Project-VOICE website will serve as a central hub to:
 ### **Phase 1 - Planning & Setup**
    - [ ] Define the sitemap and information architecture for the website.
    - [ ] Choose a tech stack (Frontend & Backend) and set up the development environment.
+    * possible tech stack: next.js for frontend, node.js with express for backend updates to the database, MongoDB for the database 
    - [ ] Create wireframes for the main pages (Homepage, About Us, Research Database, Code Experiment Database).
 
 ### **Phase 2 - Core Development**
