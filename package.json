@@ -1,0 +1,14 @@
+{
+  "name": "the_voice",
+  "version": "1.0.0",
+  "description": "Testing express for the database",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "jamie",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}
