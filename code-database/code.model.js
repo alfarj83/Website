@@ -1,14 +1,12 @@
 const mongoose = require('mongoose');
 // name
-// link to article
-// publication details
+// link to code repository
 // author(s)
-// notes
-// tags (for filter system)
+// notes about experiment
 
-const ArticleSchema = mongoose.Schema( 
+const CodeSchema = mongoose.Schema( 
     {
-        title: {
+        name: {
             type: String,
             required: true,
             default: "",
@@ -22,13 +20,7 @@ const ArticleSchema = mongoose.Schema(
             }
         ],
 
-        journal: {
-            type: String,
-            required: true,
-            default: "",
-        },
-
-        url: {
+        respository: {
             type: String,
             required: true,
             default: "",
@@ -39,8 +31,6 @@ const ArticleSchema = mongoose.Schema(
             required: true,
             default: "",
         },
-
-        tags: [String],
     },
     {
         timestamps: true,
@@ -48,4 +38,4 @@ const ArticleSchema = mongoose.Schema(
 );
 
 // exports schema for index.js
-const Article = mongoose.model("Article", ArticleSchema);
+const CodeExperiment = mongoose.model("Experiment", CodeSchema);
