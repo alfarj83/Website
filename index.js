@@ -10,7 +10,7 @@ const referenceRoute = require('./src/articles/article.route.js');
 const userRoute = require('./src/users/user.route.js');
 const app = express()
 // for user auth/encryption
-const bcrypt = require("bcrypt");
+// const bcrypt = require("bcrypt");
 
 // middleware
 app.use(express.json());
