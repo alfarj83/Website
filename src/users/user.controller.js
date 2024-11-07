@@ -2,7 +2,7 @@ const jwt = require("jsonwebtoken");
 const User = require("./user.model.js");
 
 // Register
-const SignIn = async (req, res) => {
+const SignUp = async (req, res) => {
     try {
         const { username, password } = req.body;
 
@@ -18,7 +18,7 @@ const SignIn = async (req, res) => {
 
         res.status(201).json({ message: "User registered successfully" });
     } catch (error) {
-        res.status(500).json({ error: "Failed to register user" });
+        res.status(500).json("ERROR! CANNOT SIGN UP!");
     }
 }
 
@@ -44,11 +44,11 @@ const LogIn = async (req, res) => {
 
         res.json({ message: "Logged in successfully", token });
     } catch (error) {
-        res.status(500).json({ error: "Failed to login" });
+        res.status(500).json("ERROR! CANNOT LOGIN!");
     }
 }
 
 module.exports = {
-    SignIn,
+    SignUp,
     LogIn,
 }
