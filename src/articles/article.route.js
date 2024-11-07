@@ -1,5 +1,4 @@
 const express = require("express");
-const Article = require("./article.model.js");
 const router = express.Router();
 const {getAllRefs, getRef, createRef, updateRef, deleteRef} = require('./article.controller.js');
 
