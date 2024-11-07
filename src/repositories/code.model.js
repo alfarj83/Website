@@ -1,10 +1,11 @@
+// WIP!
 const mongoose = require('mongoose');
 // name
 // link to code repository
 // author(s)
 // notes about experiment
 
-const CodeSchema = mongoose.Schema( 
+const CodeSchema = new mongoose.Schema( 
     {
         name: {
             type: String,
@@ -39,3 +40,4 @@ const CodeSchema = mongoose.Schema(
 
 // exports schema for index.js
 const CodeExperiment = mongoose.model("Experiment", CodeSchema);
+module.exports = CodeExperiment;
