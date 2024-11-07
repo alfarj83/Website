@@ -1,10 +1,10 @@
 const express = require("express");
 const Article = require("./article.model.js");
 const router = express.Router();
-const {getRefs, getRef, createRef, updateRef, deleteRef} = require('./article.controller.js');
+const {getAllRefs, getRef, createRef, updateRef, deleteRef} = require('./article.controller.js');
 
 // query all items
-router.get('/', getRefs);
+router.get('/', getAllRefs);
 
 // query one item
 router.get('/:id', getRef);
@@ -13,7 +13,7 @@ router.get('/:id', getRef);
 router.post('/create-reference', createRef);
 
 // update item
-router.put('/:id', updateRef);
+router.put('/edit/:id', updateRef);
 
 // delete item
 router.delete('/:id', deleteRef);

@@ -16,9 +16,10 @@ require('dotenv').config()
 // middleware
 app.use(express.json());
 // can directly modify database
-//app.use(cors({
-//    origin: ['http://localhost:3000', INSERT FRONT END APP HERE]
-//}))
+app.use(cors({
+    origin: ['http://localhost:3000'],
+    credentials: true
+}))
 app.use(express.urlencoded({ extended: false }));
 
 // adds routes to api
@@ -33,7 +34,7 @@ app.listen(3000, () => {
 // req = request (whatever client sends to server)
 // res = response (what server responds back with)
 app.get('/', (req, res) => {
-    res.send("hello from Node API");
+    res.send("This is the Voice!");
 });
 
 // my db pass: fJYCw1wL4kZRL0hl
