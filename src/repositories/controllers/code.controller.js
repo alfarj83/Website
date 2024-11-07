@@ -1,4 +1,4 @@
-const CodeExperiment = require('../code-database/code.model');
+const CodeExperiment = require('../../../code-database/code.model');
 
 // querying all items
 const getExperiments = async (req, res) => {

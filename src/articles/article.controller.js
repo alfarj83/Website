@@ -1,4 +1,4 @@
-const Article = require('../research-database/article.model');
+const Article = require('./article.model.js');
 
 // querying all items
 const getRefs = async (req, res) => {
@@ -6,7 +6,7 @@ const getRefs = async (req, res) => {
         const refs = await Article.find({});
         res.status(200).json(refs);
     } catch (error) {
-        res.status(500).json("ERROR! CANNOT GET!");
+        res.status(500).json("ERROR! CANNOT GETS!");
     }
 }
 
@@ -24,10 +24,11 @@ const getRef = async (req, res) => {
 // creating item
 const createRef = async (req, res) => {
     try {
-        const ref = await Article.create(req.body);
-        res.status(200).json(ref);
+        const newRef = await Article.create(req.body);
+        await newRef.save();
+        res.status(200).json(newRef);
     } catch (error) {
-        res.status(500).json("ERROR! CANNOT GET!");
+        res.status(500).json("ERROR! CANNOT POST!");
     }
 }
 
@@ -42,7 +43,7 @@ const updateRef = async (req, res) => {
         const updatedRef = await Article.findById(id);
         res.status(200).json(updatedRef);
     } catch (error) {
-        res.status(500).json("ERROR! CANNOT GET!");
+        res.status(500).json("ERROR! CANNOT PATCH!");
     }
 }
 
@@ -56,7 +57,7 @@ const deleteRef = async (req, res) => {
         }
         res.status(200).json({message: "Article deleted successfully"});
     } catch (error) {
-        res.status(500).json("ERROR! CANNOT GET!");
+        res.status(500).json("ERROR! CANNOT DELETE!");
     }
 }
 

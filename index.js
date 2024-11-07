@@ -3,17 +3,27 @@
 const express = require('express')
 // dependency to access db
 const mongoose = require('mongoose');
-// const Article = require('./research-database/article.model.js');
-const referenceRoute = require('./routes/article.route.js');
+// to connect database to frontend (securely)
+const cors = require('cors');
+// routes
+const referenceRoute = require('./src/articles/article.route.js');
+// const userRoute = require('./src/users/user.route.js');
 const app = express()
+
+// to secure db url
+require('dotenv').config()
 
 // middleware
 app.use(express.json());
 // can directly modify database
+//app.use(cors({
+//    origin: ['http://localhost:3000', INSERT FRONT END APP HERE]
+//}))
 app.use(express.urlencoded({ extended: false }));
 
 // adds routes to api
 app.use("/api/references", referenceRoute);
+// app.use("/api/auth", userRoute);
 
 // sets server to run on port 3000
 app.listen(3000, () => {
@@ -27,7 +37,7 @@ app.get('/', (req, res) => {
 });
 
 // my db pass: fJYCw1wL4kZRL0hl
-mongoose.connect("mongodb+srv://jemiapalo83:fJYCw1wL4kZRL0hl@thevoice.8r2ml.mongodb.net/Node-API?retryWrites=true&w=majority&appName=TheVoice")
+mongoose.connect(process.env.DB_URL)
 .then(() => {
     console.log("Connected!");
 })

@@ -1,7 +1,7 @@
 const express = require("express");
-const Article = require("../research-database/article.model.js");
+const Article = require("./article.model.js");
 const router = express.Router();
-const {getRefs, getRef, createRef, updateRef, deleteRef} = require('../controllers/article.controller.js');
+const {getRefs, getRef, createRef, updateRef, deleteRef} = require('./article.controller.js');
 
 // query all items
 router.get('/', getRefs);
@@ -10,7 +10,7 @@ router.get('/', getRefs);
 router.get('/:id', getRef);
 
 // create item
-router.post('/', createRef);
+router.post('/create-reference', createRef);
 
 // update item
 router.put('/:id', updateRef);

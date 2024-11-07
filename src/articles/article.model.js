@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 // notes
 // tags (for filter system)
 
-const ArticleSchema = mongoose.Schema( 
+const ArticleSchema = new mongoose.Schema( 
     {
         title: {
             type: String,
@@ -49,3 +49,4 @@ const ArticleSchema = mongoose.Schema(
 
 // exports schema for index.js
 const Article = mongoose.model("Article", ArticleSchema);
+module.exports = Article;
