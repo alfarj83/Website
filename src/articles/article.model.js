@@ -3,22 +3,22 @@ const mongoose = require('mongoose');
 const ArticleSchema = new mongoose.Schema( 
     {
         title: {
-          type: "string",
+          type: String,
           required: true
         },
 
         journalBookTitle: {
-          type: "string",
+          type: String,
           required: true
         },
 
         publishedYear: {
-          type: "number",
+          type: Number,
           required: true
         },
 
         publishedMonth: {
-          type: "string",
+          type: String,
             enum: [
             "January", "February", "March", "April", "May", "June",
             "July", "August", "September", "October", "November", "December"
@@ -27,48 +27,46 @@ const ArticleSchema = new mongoose.Schema(
         },
 
         volume: {
-          type: "number",
+          type: Number,
           required: false
         },
 
-        numbe: {
-          type: "number",
+        Number: {
+          type: Number,
           required: false
         },
 
         annotation: {
-          type: "string",
+          type: String,
           required: true
         },
 
         tags: {
-            type: "array",
-          items: {
-            type: "string"
+            type: Array,
+            items: {
+            type: String
           },
           required: false
         },
 
         latexNotes: {
-          type: "array",
+          type: Array,
           items: {
-            type: "string"
+            type: String
           },
           required: false,
           description: "Array of LaTeX file paths"
         },
 
         pdfVersion: {
-          type: "array",
-          items: {
-            type: "string"
-          },
-          required: false,
-          description: "Array of PDF file paths"
+            fileName: String,
+            url: String,
+            size: Number,
+            description: "Array of PDF file paths"
         },
         
         githubUrl: {
-          type: "string",
+          type: String,
           required: false,
           description: "Optional URL for GitHub commit link"
         }
