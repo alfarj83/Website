@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 // routes
 const referenceRoute = require('./src/articles/article.route.js');
-const userRoute = require('./src/users/user.route.js');
+// const userRoute = require('./src/users/user.route.js'); // for possible use
 const app = express()
 // for user auth/encryption
 // const bcrypt = require("bcrypt");
@@ -23,7 +23,7 @@ app.use(express.urlencoded({ extended: false }));
 
 // adds routes to api
 app.use("/api/references", referenceRoute);
-app.use("/api/auth", userRoute);
+// app.use("/api/auth", userRoute);
 
 // sets server to run on port 3000
 app.listen(3000, () => {

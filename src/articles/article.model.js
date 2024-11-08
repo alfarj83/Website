@@ -1,50 +1,78 @@
 const mongoose = require('mongoose');
-// name
-// link to article
-// publication details
-// author(s)
-// notes
-// tags (for filter system)
 
 const ArticleSchema = new mongoose.Schema( 
     {
         title: {
-            type: String,
-            required: true,
-            default: "",
+          type: "string",
+          required: true
         },
 
-        authors: [
-            {
-                type: String,
-                required: true,
-                default: "",
-            }
-        ],
-
-        journal: {
-            type: String,
-            required: true,
-            default: "",
+        journalBookTitle: {
+          type: "string",
+          required: true
         },
 
-        url: {
-            type: String,
-            required: true,
-            default: "",
+        publishedYear: {
+          type: "number",
+          required: true
         },
 
-        notes: {
-            type: String,
-            required: true,
-            default: "",
+        publishedMonth: {
+          type: "string",
+            enum: [
+            "January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December"
+          ],
+          required: true
         },
 
-        tags: [String],
-    },
-    {
-        timestamps: true,
-    }
+        volume: {
+          type: "number",
+          required: false
+        },
+
+        numbe: {
+          type: "number",
+          required: false
+        },
+
+        annotation: {
+          type: "string",
+          required: true
+        },
+
+        tags: {
+            type: "array",
+          items: {
+            type: "string"
+          },
+          required: false
+        },
+
+        latexNotes: {
+          type: "array",
+          items: {
+            type: "string"
+          },
+          required: false,
+          description: "Array of LaTeX file paths"
+        },
+
+        pdfVersion: {
+          type: "array",
+          items: {
+            type: "string"
+          },
+          required: false,
+          description: "Array of PDF file paths"
+        },
+        
+        githubUrl: {
+          type: "string",
+          required: false,
+          description: "Optional URL for GitHub commit link"
+        }
+      }
 );
 
 // exports schema for index.js
