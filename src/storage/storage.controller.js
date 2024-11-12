@@ -22,7 +22,7 @@ async function uploadFile(filePath, fileName) {
     });
 
     // File URL for access (example link format)
-    const fileUrl = `https://f000.backblazeb2.com/file/YOUR_BUCKET_NAME/${fileName}`;
+    const fileUrl = `https://f000.backblazeb2.com/file/Voice-Research/${fileName}`;
 
     console.log(`File uploaded to Backblaze. URL: ${fileUrl}`);
 

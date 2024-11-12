@@ -28,8 +28,8 @@ app.use("/api/references", referenceRoute);
 
 // for offloading files (pdf, latex, code files into backblaze cloud storage
 const b2 = new B2({
-  applicationKeyId: 'BB_KEY',
-  applicationKey: 'BB_KEY_ID'
+  applicationKeyId: process.env.BB_KEY_ID,
+  applicationKey: process.env.BB_KEY
 });
 
 // authorize with Backblaze
