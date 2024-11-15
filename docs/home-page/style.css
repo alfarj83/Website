@@ -61,6 +61,18 @@
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
+li button{
+    margin-left: 20px;
+}
+
+.btn-primary {
+    background-color: #4a90e2;
+    border-color: #4a90e2;
+}
+.btn-primary:hover {
+    filter: brightness(95%);
+}
+
 i{
     font-size:40px;
 }
@@ -72,3 +84,4 @@ i:hover{
 #logo{
     height:300px;
 }
+
