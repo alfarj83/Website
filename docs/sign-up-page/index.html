@@ -18,25 +18,29 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="https://project-voice-rpi.github.io/Website/">Home</a>
+                        <a class="nav-link active" href="/docs/index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://project-voice-rpi.github.io/Website/about-page/index.html">About</a>
+                        <a class="nav-link" href="/docs/about-page/index.html">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://project-voice-rpi.github.io/Website/research-database/index.html">Research Database</a>
+                        <a class="nav-link" href="/docs/research-database/index.html">Research Database</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://project-voice-rpi.github.io/Website/code-database/index.html">Code Database</a>
+                        <a class="nav-link" href="/docs/code-database/index.html">Code Database</a>
                     </li>
+                    
                 </ul>
-                <button class="btn btn-primary">Log In</button>
+                <ul class="navbar-nav me-auto">
+                    <li><button class="btn btn-primary" href="/docs/sign-up-page/index.html">Sign Up</button></li>
+                    <li><button class="btn btn-primary" href="/docs/login-page/index.html">Login</button></li>
+                </ul>
             </div>
         </div>
     </nav>
     <div class="auth-container">
         <div class="auth-card">
-            <img src="/api/placeholder/200/100" alt="Project Voice Logo" class="logo">
+            <img src="/docs/assets/project-voice-logo.png" alt="Project Voice Logo" class="logo">
             <h2 class="auth-header">Create Account</h2>
             <form>
                 <div class="form-group">
@@ -56,12 +60,6 @@
                     <input type="password" class="form-input" placeholder="Confirm your password">
                 </div>
                 <div class="form-group">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="termsCheck">
-                        <label class="form-check-label" for="termsCheck">
-                            I agree to the <a href="#" class="text-primary">Terms of Service</a> and <a href="#" class="text-primary">Privacy Policy</a>
-                        </label>
-                    </div>
                 </div>
                 <button type="submit" class="btn btn-primary">Create Account</button>
                 <p class="text-center mt-4 text-muted">
