@@ -161,16 +161,19 @@
 
             <!-- Add New Paper Tab -->
             <div id="add-tab" class="tab-content" style="display: none;">
-                <div class="row">
-                    <div class="col-lg-8 mx-auto">
-                        <div class="card custom-card">
+                <div class="row justify-content-center">
+                    <!-- Add Paper Form -->
+                    <div class="col-lg-9">
+                        <div class="card custom-card h-100">
                             <div class="card-body p-4">
-                                <form>
+                                <form class="h-100 d-flex flex-column">
+                                    <!-- Title -->
                                     <div class="mb-4">
                                         <label class="form-label fw-bold">Title</label>
                                         <input type="text" class="form-control" placeholder="Enter research title">
                                     </div>
-
+            
+                                    <!-- Journal/Book Title, Published Year, and Month -->
                                     <div class="row mb-4">
                                         <div class="col-md-6">
                                             <label class="form-label fw-bold">Journal/Book Title</label>
@@ -200,11 +203,11 @@
                                                 <option>October</option>
                                                 <option>November</option>
                                                 <option>December</option>
-                                                <!-- Add other months -->
                                             </select>
                                         </div>
                                     </div>
-
+            
+                                    <!-- Volume and Issue Number -->
                                     <div class="row mb-4">
                                         <div class="col-md-6">
                                             <label class="form-label fw-bold">Volume (Optional)</label>
@@ -215,22 +218,25 @@
                                             <input type="text" class="form-control" placeholder="Enter issue number">
                                         </div>
                                     </div>
-
+            
+                                    <!-- Annotation/Short Summary -->
                                     <div class="mb-4">
                                         <label class="form-label fw-bold">Annotation/Short Summary</label>
                                         <textarea class="form-control" rows="4" placeholder="Enter a brief summary of the research"></textarea>
                                     </div>
-
+            
+                                    <!-- Tags -->
                                     <div class="mb-4">
                                         <label class="form-label fw-bold">Tags</label>
                                         <input type="text" class="form-control mb-2" placeholder="Enter tags separated by commas">
-                                        <div class="d-flex flex-wrap">
+                                        <div class="d-flex flex-wrap gap-2">
                                             <span class="tag-badge">Filter 1</span>
                                             <span class="tag-badge">Filter 2</span>
                                             <span class="tag-badge">Filter 3</span>
                                         </div>
                                     </div>
-
+            
+                                    <!-- File Uploads -->
                                     <div class="mb-4">
                                         <label class="form-label fw-bold">LaTeX Notes</label>
                                         <div class="file-upload mb-3">
@@ -238,7 +244,6 @@
                                             <p class="mb-0">Drag and drop your LaTeX files here or click to browse</p>
                                         </div>
                                     </div>
-
                                     <div class="mb-4">
                                         <label class="form-label fw-bold">PDF Version</label>
                                         <div class="file-upload">
@@ -246,9 +251,10 @@
                                             <p class="mb-0">Drag and drop your PDF files here or click to browse</p>
                                         </div>
                                     </div>
-
-                                    <div class="d-grid gap-2">
-                                        <button type="submit" class="btn btn-primary btn-lg">Save Research Entry</button>
+            
+                                    <!-- Submit Button -->
+                                    <div class="mt-auto">
+                                        <button type="submit" class="btn btn-primary btn-lg w-100">Save Research Entry</button>
                                     </div>
                                 </form>
                             </div>
