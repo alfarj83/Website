@@ -1,4 +1,4 @@
-import { Navbar } from '../components/Navbar';
+import Navbar from '../components/Navbar';
 import { HeroSectionCode } from '../components/HeroSection';
 import { TabNavigationCode } from '../components/TabNavigation';
 import { SearchBar } from '../components/SearchFilter';

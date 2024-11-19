@@ -1,6 +1,6 @@
-import { Navbar } from '../components/Navbar';
+import Navbar from '../components/Navbar';
 import { HeroSectionResearch } from '../components/HeroSection';
-import { TabNavigation } from '../components/TabNavigation';
+import { TabNavigationResearch } from '../components/TabNavigation';
 import { SearchBar } from '../components/SearchFilter';
 import { FilterSidebar } from '../components/SearchFilter';
 import { ResearchCard } from '../components/Cards';
@@ -26,7 +26,7 @@ export default function ResearchDatabase() {
       <Navbar />
       <HeroSectionResearch />
       <div className="container">
-        <TabNavigation activeTab={activeTab} setActiveTab={setActiveTab} />
+        <TabNavigationResearch activeTab={activeTab} setActiveTab={setActiveTab} />
         {activeTab === 'view' && (
           <>
             <SearchBar />
