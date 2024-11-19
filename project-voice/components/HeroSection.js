@@ -51,4 +51,14 @@ export function HeroSectionAbout() {
     );
   }
   
+  export function HeroSectionCode() {
+    return (
+      <div className="gradient-header mb-5">
+      <div className="container">
+        <h1 className="display-4 fw-bold">Code Database</h1>
+        <p className="lead">Manage and explore our code experiment collection</p>
+      </div>
+    </div>
+    );
+  }
   
