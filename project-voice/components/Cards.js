@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export function ResearchCard({ title, date, journal, summary, tags }) {
     return (
       <div className="card research-card mb-4">
@@ -26,7 +28,7 @@ export function ResearchCard({ title, date, journal, summary, tags }) {
     return (
       <div className="auth-container">
         <div className="auth-card">
-          <img src="/docs/assets/project-voice-logo.png" alt="Project Voice Logo" className="logo" />
+          <Image src="../public/project-voice-logo.png" alt="Project Voice Logo" className="logo" />
           <h2 className="auth-header">Create Account</h2>
           <form>
             <div className="form-group">
@@ -59,7 +61,7 @@ export function ResearchCard({ title, date, journal, summary, tags }) {
     return (
       <div className="auth-container">
         <div className="auth-card">
-          <img src="/docs/assets/project-voice-logo.png" alt="Project Voice Logo" className="logo" />
+          <Image src="../public/project-voice-logo.png" alt="Project Voice Logo" className="logo" />
           <h2 className="auth-header">Welcome Back</h2>
   
           <form>
@@ -76,8 +78,8 @@ export function ResearchCard({ title, date, journal, summary, tags }) {
               <a href="#" className="text-primary">Forgot password?</a>
             </p>
             <p className="text-center mt-4 text-muted">
-              Don't have an account? <a href="../sign-in-page/index.html" className="text-primary">Sign up</a>
-            </p>
+              Don&apos;t have an account? <a href="../sign-in-page/index.html" className="text-primary">Sign up</a>
+           </p>
           </form>
         </div>
       </div>

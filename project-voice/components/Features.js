@@ -34,7 +34,7 @@ export function FeaturesSection() {
     );
   }
   
-  function Feature({ icon, title, description }) {
+  export function Feature({ icon, title, description }) {
     return (
       <div className="col-md-6">
         <div className="d-flex">
