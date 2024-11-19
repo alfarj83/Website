@@ -7,10 +7,12 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 // routes
 const referenceRoute = require('./src/articles/article.route.js');
-const userRoute = require('./src/users/user.route.js');
+// const userRoute = require('./src/users/user.route.js'); // for possible use
 const app = express()
 // for user auth/encryption
 // const bcrypt = require("bcrypt");
+// cloud storage for files
+const B2 = require('backblaze-b2');
 
 // middleware
 app.use(express.json());
@@ -23,7 +25,19 @@ app.use(express.urlencoded({ extended: false }));
 
 // adds routes to api
 app.use("/api/references", referenceRoute);
-app.use("/api/auth", userRoute);
+
+// for offloading files (pdf, latex, code files into backblaze cloud storage
+const b2 = new B2({
+  applicationKeyId: process.env.BB_KEY_ID,
+  applicationKey: process.env.BB_KEY
+});
+
+// authorize with Backblaze
+async function authorizeBackblaze() {
+  await b2.authorize();
+}
+authorizeBackblaze();
+
 
 // sets server to run on port 3000
 app.listen(3000, () => {
