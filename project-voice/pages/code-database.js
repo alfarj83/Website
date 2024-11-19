@@ -4,13 +4,14 @@ import { TabNavigationCode } from '../components/TabNavigation';
 import { SearchBar } from '../components/SearchFilter';
 import { FilterSidebar } from '../components/SearchFilter';
 import { AddExperimentForm } from '../components/Forms';
+import { ExperimentList } from '../components/DatabaseList';
 import { useState } from 'react';
 import '../styles/code-database.css'; 
 import '../scripts/code-script'; 
 
-export function CodeDatabasePage() {
+export default function CodeDatabasePage() {
   const [activeTab, setActiveTab] = useState("view");
-  const [experiments, setExperiments] = useState([
+  const experiments = [
     {
       title: "Experiment 1",
       date: "2024-11-18",
@@ -20,7 +21,7 @@ export function CodeDatabasePage() {
       files: "3 Files (Python, Jupyter)",
       tags: ["Machine Learning", "Python"],
     },
-  ]);
+  ];
 
   const Tabs = ({ activeTab, setActiveTab, children }) => {
     return (
@@ -56,3 +57,4 @@ export function CodeDatabasePage() {
     </>
   );
 }
+
