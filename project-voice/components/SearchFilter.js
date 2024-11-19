@@ -3,7 +3,7 @@ export function SearchBar() {
       <div className="search-bar mb-4">
         <div className="row align-items-center">
           <div className="col-md-8">
-            <input type="text" className="form-control form-control-lg" placeholder="Search research papers..." />
+            <input type="text" className="form-control form-control-lg" placeholder="Search database..." />
           </div>
           <div className="col-md-4">
             <button className="btn btn-primary btn-lg w-100">Search</button>

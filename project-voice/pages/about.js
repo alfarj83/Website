@@ -2,6 +2,7 @@ import {Navbar} from '../components/Navbar';
 import {Footer} from '../components/Footer';
 import {HeroSectionAbout} from '../components/HeroSection';
 import {TeamSection} from '../components/TeamSection';
+import '../styles/about.css'; 
 
 export default function About() {
   return (

@@ -6,6 +6,8 @@ import { FilterSidebar } from '../components/SearchFilter';
 import { ResearchCard } from '../components/Cards';
 import { AddResearchForm } from '../components/Forms';
 import { useState } from 'react';
+import '../styles/research-database.css'; 
+import '../scripts/research-script'; 
 
 export default function ResearchDatabase() {
   const [activeTab, setActiveTab] = useState('view');
