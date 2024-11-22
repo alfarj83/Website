@@ -28,7 +28,7 @@ export function ResearchCard({ title, date, journal, summary, tags }) {
     return (
       <div className="auth-container">
         <div className="auth-card">
-          <Image src="../public/project-voice-logo.png" alt="Project Voice Logo" className="logo" />
+          <Image src="/project-voice-logo.png" alt="Project Voice Logo" className="logo" width="200" height="200" />
           <h2 className="auth-header">Create Account</h2>
           <form>
             <div className="form-group">
@@ -49,7 +49,7 @@ export function ResearchCard({ title, date, journal, summary, tags }) {
             </div>
             <button type="submit" className="btn btn-primary">Create Account</button>
             <p className="text-center mt-4 text-muted">
-              Already have an account? <a href="../login-page/index.html" className="text-primary">Log in</a>
+              Already have an account? <a href="/login" className="text-primary">Log in</a>
             </p>
           </form>
         </div>
@@ -61,7 +61,7 @@ export function ResearchCard({ title, date, journal, summary, tags }) {
     return (
       <div className="auth-container">
         <div className="auth-card">
-          <Image src="../public/project-voice-logo.png" alt="Project Voice Logo" className="logo" />
+          <Image src="/project-voice-logo.png" alt="Project Voice Logo" className="logo" width="200" height="200" />
           <h2 className="auth-header">Welcome Back</h2>
   
           <form>
@@ -78,7 +78,7 @@ export function ResearchCard({ title, date, journal, summary, tags }) {
               <a href="#" className="text-primary">Forgot password?</a>
             </p>
             <p className="text-center mt-4 text-muted">
-              Don&apos;t have an account? <a href="../sign-in-page/index.html" className="text-primary">Sign up</a>
+              Don&apos;t have an account? <a href="/sign-up" className="text-primary">Sign up</a>
            </p>
           </form>
         </div>
