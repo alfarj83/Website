@@ -3,9 +3,6 @@ import Footer from '../components/Footer';
 import {HeroSectionAbout} from '../components/HeroSection';
 import TeamSection from '../components/TeamSection';
 import '../styles/about.css'; 
-import 'bootstrap/dist/css/bootstrap.min.css';
-import '@fortawesome/fontawesome-free/css/all.min.css';
-
 
 export default function About() {
   return (

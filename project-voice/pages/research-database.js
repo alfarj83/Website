@@ -8,8 +8,6 @@ import { AddResearchForm } from '../components/Forms';
 import { useState } from 'react';
 import '../styles/research-database.css'; 
 import '../scripts/research-script'; 
-import 'bootstrap/dist/css/bootstrap.min.css';
-import '@fortawesome/fontawesome-free/css/all.min.css';
 
 export default function ResearchDatabase() {
   const [activeTab, setActiveTab] = useState('view');

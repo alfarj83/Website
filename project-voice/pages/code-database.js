@@ -8,8 +8,6 @@ import { ExperimentList } from '../components/DatabaseList';
 import { useState } from 'react';
 import '../styles/code-database.css'; 
 import '../scripts/code-script'; 
-import 'bootstrap/dist/css/bootstrap.min.css';
-import '@fortawesome/fontawesome-free/css/all.min.css';
 
 export default function CodeDatabasePage() {
   const [activeTab, setActiveTab] = useState("view");

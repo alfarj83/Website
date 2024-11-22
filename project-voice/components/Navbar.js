@@ -10,78 +10,50 @@ export default function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm">
       <div className="container">
-        {/* Brand Logo */}
-        <Link href="/project-voice-logo.png" width="200" className="navbar-brand fw-bold text-primary">
-          Project Voice
+        <Link href="/" passHref>
+          <a className="navbar-brand fw-bold text-primary">Project Voice</a>
         </Link>
-
-        {/* Mobile Toggle Button */}
         <button
           className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
           aria-label="Toggle navigation"
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-
-        {/* Navigation Links */}
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav me-auto">
-            {/* Home */}
             <li className="nav-item">
-              <Link 
-                href="/" 
-                className={`nav-link ${isActive('/') ? 'active text-primary fw-bold' : ''}`}
-              >
-                Home
+              <Link href="/" passHref>
+                <a className={`nav-link ${isActive('/') ? 'active' : ''}`}>Home</a>
               </Link>
             </li>
-
-            {/* About */}
             <li className="nav-item">
-              <Link 
-                href="/about" 
-                className={`nav-link ${isActive('/about') ? 'active text-primary fw-bold' : ''}`}
-              >
-                About
+              <Link href="/about" passHref>
+                <a className={`nav-link ${isActive('/about') ? 'active' : ''}`}>About</a>
               </Link>
             </li>
-
-            {/* Research Database */}
             <li className="nav-item">
-              <Link 
-                href="/research-database" 
-                className={`nav-link ${isActive('/research-database') ? 'active text-primary fw-bold' : ''}`}
-              >
-                Research Database
+              <Link href="/research-database" passHref>
+                <a className={`nav-link ${isActive('/research-database') ? 'active' : ''}`}>Research Database</a>
               </Link>
             </li>
-
-            {/* Code Database */}
             <li className="nav-item">
-              <Link 
-                href="/code-database" 
-                className={`nav-link ${isActive('/code-database') ? 'active text-primary fw-bold' : ''}`}
-              >
-                Code Database
+              <Link href="/code-database" passHref>
+                <a className={`nav-link ${isActive('/code-database') ? 'active' : ''}`}>Code Database</a>
               </Link>
             </li>
           </ul>
-
-          {/* Auth Buttons */}
           <ul className="navbar-nav">
             <li className="nav-item">
-              <Link href="/sign-up" className="btn btn-primary">
-                Sign Up
+              <Link href="/sign-up" passHref>
+                <a className="btn btn-primary">Sign Up</a>
               </Link>
             </li>
             <li className="nav-item ms-2">
-              <Link href="/login" className="btn btn-outline-primary">
-                Login
+              <Link href="/login" passHref>
+                <a className="btn btn-primary">Login</a>
               </Link>
             </li>
           </ul>
