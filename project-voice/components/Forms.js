@@ -1,6 +1,50 @@
+import { useState } from 'react';
+
 export function AddResearchForm() {
+    const [formData, setFormData] = useState({
+      title: '',
+      journal: '',
+      year: '2024',
+      month: 'January',
+      annotation: '',
+    });
+
+    const handleChange = (e) => {
+      const { name, value } = e.target;
+      setFormData((prev) => ({ ...prev, name: value }));
+    };
+
+    const handleSubmit = async (e) => {
+      e.preventDefault();
+
+      try {
+        const response = await fetch('/api/add-research', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(formData),
+        });
+
+        const result = await response.json();
+        if (result.success) {
+          alert('Research entry saved successfully!');
+          setFormData({
+            title: '',
+            journal: '',
+            year: '2024',
+            month: 'January',
+            annotation: '',
+          });
+        } else {
+          alert('Failed to save research entry.');
+        }
+      } catch (error) {
+        console.error(error);
+        alert('An error occurred while saving the research entry.');
+      }
+    };
+
     return (
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className="mb-4">
           <label className="form-label fw-bold">Title</label>
           <input type="text" className="form-control" placeholder="Enter research title" />
@@ -8,7 +52,13 @@ export function AddResearchForm() {
         <div className="row mb-4">
           <div className="col-md-6">
             <label className="form-label fw-bold">Journal/Book Title</label>
-            <input type="text" className="form-control" placeholder="Enter journal or book title" />
+            <input 
+              type="text" 
+              className="form-control" 
+              placeholder="Enter journal or book title" 
+              value={formData.title}
+              onChange={handleChange}
+              />
           </div>
           <div className="col-md-3">
             <label className="form-label fw-bold">Published Year</label>

@@ -22,7 +22,6 @@ export default function ResearchDatabase() {
       tags: ['Filter 1', 'Filter 2', 'Filter 3'],
     },
   ];
-
   return (
     <>
       <Navbar />
